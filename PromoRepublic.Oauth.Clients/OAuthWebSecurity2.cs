@@ -4,7 +4,7 @@ using Microsoft.Web.WebPages.OAuth;
 
 namespace PromoRepublic.Oauth.Clients
 {
-    class OAuthWebSecurity2
+    public class OAuthWebSecurity2
     {
         public static void RegisterFacebookClient(string appId, string appSecret, IEnumerable<string> extraScopes = null)
         {
