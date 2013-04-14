@@ -6,11 +6,11 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("PromoRepublic.Oauth.Clients")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Extension to DotNetOpenAuth adding more social networks")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("")]
+[assembly: AssemblyCompany("PromoRepublic")]
 [assembly: AssemblyProduct("PromoRepublic.Oauth.Clients")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCopyright("Copyright PromoRepublic ©  2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
