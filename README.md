@@ -22,3 +22,6 @@ Add the following code lines to your AuthConfig.cs:
 ```
 
 filling the blanks with your app Ids and keys. Good article of how to obtain this Ids here: [Article in russian](http://habrahabr.ru/post/145988/)
+
+&copy;PromoRepublic 2013, 
+http://promorepublic.com
