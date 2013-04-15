@@ -46,6 +46,11 @@
 
 <p>Add the following code lines to your AuthConfig.cs:</p>
 
+<div class="highlight"><pre><span class="k">using</span> <span class="nn">PromoRepublic.Oauth.Clients</span><span class="p">;</span>
+</pre></div>
+
+<p>and</p>
+
 <div class="highlight"><pre>     <span class="n">OAuthWebSecurity2</span><span class="p">.</span><span class="n">RegisterFacebookClient</span><span class="p">(</span><span class="n">appId</span><span class="p">:</span> <span class="s">"..."</span><span class="p">,</span> <span class="n">appSecret</span><span class="p">:</span> <span class="s">"..."</span><span class="p">);</span>
      <span class="n">OAuthWebSecurity2</span><span class="p">.</span><span class="n">RegisterVkontakteClient</span><span class="p">(</span><span class="n">appId</span><span class="p">:</span> <span class="s">"..."</span><span class="p">,</span> <span class="n">appSecret</span><span class="p">:</span> <span class="s">"..."</span><span class="p">);</span>
      <span class="n">OAuthWebSecurity2</span><span class="p">.</span><span class="n">RegisterOdnoklassnikiClient</span><span class="p">(</span><span class="n">appId</span><span class="p">:</span> <span class="s">"..."</span><span class="p">,</span> <span class="n">appSecret</span><span class="p">:</span> <span class="s">"..."</span><span class="p">,</span> <span class="n">appPublic</span><span class="p">:</span> <span class="s">"..."</span><span class="p">);</span>
