@@ -16,6 +16,12 @@ Usage
 Add the following code lines to your AuthConfig.cs:
 
 ```csharp
+using PromoRepublic.Oauth.Clients;
+```
+
+and
+
+```csharp
      OAuthWebSecurity2.RegisterFacebookClient(appId: "...", appSecret: "...");
      OAuthWebSecurity2.RegisterVkontakteClient(appId: "...", appSecret: "...");
      OAuthWebSecurity2.RegisterOdnoklassnikiClient(appId: "...", appSecret: "...", appPublic: "...");
