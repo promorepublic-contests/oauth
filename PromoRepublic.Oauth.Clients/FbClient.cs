@@ -132,6 +132,7 @@ namespace PromoRepublic.Oauth.Clients
             userData.AddItemIfNotEmpty("link", graphData.Link == null ? null : graphData.Link.AbsoluteUri);
             userData.AddItemIfNotEmpty("gender", graphData.Gender);
             userData.AddItemIfNotEmpty("birthday", graphData.Birthday);
+            userData.AddItemIfNotEmpty("photo", String.Format("http://graph.facebook.com/{0}/picture?width=156&height=156", graphData.Id));
             return userData;
         }
 

@@ -23,6 +23,15 @@ namespace PromoRepublic.Oauth.Clients
             _appSecret = appSecret;
         }
 
+        public VkClient(string appId, string appSecret, IEnumerable<string> extraScopes)
+            : this(appId, appSecret)
+        {
+            if (extraScopes != null)
+            {
+                Scopes.AddRange(extraScopes);
+            }
+        }
+
         public string AppId
         {
             get { return _appId; }
@@ -33,6 +42,13 @@ namespace PromoRepublic.Oauth.Clients
             get { return _appSecret; }
         }
 
+        private readonly List<string> _scopes = new List<string>(new []{"email"});
+
+        /// <summary>
+        /// notify,friends,photos,audio,video,docs,notes,pages,wall,groups,messages,ads,offline
+        /// </summary>
+        public List<string> Scopes { get { return _scopes; } }
+        
         protected override Uri GetServiceLoginUrl(Uri returnUrl) {
             if (returnUrl == null) throw new ArgumentNullException("returnUrl");
             var builder = new UriBuilder("https://oauth.vk.com/authorize");
@@ -41,7 +57,8 @@ namespace PromoRepublic.Oauth.Clients
                     {"client_id", AppId},
                     {"redirect_uri", NormalizeHexEncoding(returnUrl.AbsoluteUri)},
                     {"display", "page"},
-                    {"response_type", "code"}
+                    {"response_type", "code"},
+                    {"scope", String.Join(",", Scopes)},
                 };
             builder.AppendQueryArgs(args);
             return builder.Uri;

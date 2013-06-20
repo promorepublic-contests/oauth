@@ -14,12 +14,12 @@ namespace PromoRepublic.Oauth.Clients
                     "Facebook",
                     new Dictionary<string, object>());            
         }
-        
-        public static void RegisterVkontakteClient(string appId, string appSecret)
+
+        public static void RegisterVkontakteClient(string appId, string appSecret, IEnumerable<string> extraScopes = null)
         {
             if (!String.IsNullOrEmpty(appId) && !String.IsNullOrEmpty(appSecret))
                 OAuthWebSecurity.RegisterClient(
-                    new VkClient(appId, appSecret),
+                    new VkClient(appId, appSecret, extraScopes),
                     "Vkontakte",
                     new Dictionary<string, object>());            
         }   
