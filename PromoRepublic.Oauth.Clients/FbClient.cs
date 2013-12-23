@@ -163,7 +163,16 @@ namespace PromoRepublic.Oauth.Clients
 
             using (var client = new WebClient())
             {
-                var data = client.DownloadString(builder.Uri);
+                string data;
+                try
+                {
+                    data = client.DownloadString(builder.Uri);
+                }
+                catch (WebException)
+                {
+                    //try once again
+                    data = client.DownloadString(builder.Uri);
+                }
                 if (string.IsNullOrEmpty(data))
                 {
                     return null;
